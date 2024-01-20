@@ -11,7 +11,10 @@
 }
 
 body {
-     font-family: 'Poppins', sans-serif;;
+     font-family: 'Poppins', sans-serif;
+     scroll-behavior: smooth;
+     background-color: #E0E0E0; /* Set your desired background color */
+     color: rgb(85, 85, 85);
 }
 
 html {
@@ -21,6 +24,13 @@ html {
 p {
     color: rgb(85, 85, 85);
 }
+
+.section__pic-container img {
+  border: 4px solid #1D2B36; /* Set border width and color */
+  border-radius: 50%; /* Make the border circular */
+}
+
+
 
 /* TRANSITION */
 
