@@ -185,6 +185,7 @@ a:hover {
  #home {
     position: relative;
     background-color: 	#565484;
+    border: tomato 0.15rem solid;
     height: 20vh;
     margin-top: 10px;
   }
@@ -309,7 +310,8 @@ a:hover {
 
 #about {
   position: relative;
-  border: #1D2B36 0.1rem solid;
+  border: #1D2B36 0.25rem solid;
+  border-radius: 3%;
   background-color: #C5EEEF;
 }
 
