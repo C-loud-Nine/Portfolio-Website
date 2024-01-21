@@ -17,6 +17,7 @@ body {
      color: rgb(85, 85, 85);
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -75,6 +76,7 @@ a:hover {
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 2px;
+  color: #FF7D66;
 }
 
  /* HAMBURGER MENU */
@@ -161,7 +163,7 @@ a:hover {
   /* SECTIONS */
 
   section {
-    padding: 4vh;
+    padding: 2vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -182,13 +184,18 @@ a:hover {
 
  #home {
     position: relative;
+    background-color: 	#565484;
+    height: 20vh;
+    margin-top: 10px;
   }
  
   #profile {
     display: flex;
+    position: relative;
     justify-content: center;
     gap: 5rem;
     height: 80vh;
+    margin: 0;
   }
  
   .section__pic-container {
@@ -296,4 +303,94 @@ a:hover {
 
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+
+
+#about {
+  position: relative;
+  border: #1D2B36 0.1rem solid;
+  background-color: #C5EEEF;
+}
+
+.about-text {
+  text-align: justify;
+}
+
+.about-container {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-container,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.scroll__text {
+  position: absolute;
+  right: -5rem;
+  bottom: 4.5rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.scroll__text-top {
+  position: absolute;
+  right: -5rem;
+  top: 4.5rem;
+}
+
+.arrow_top {
+  position: absolute;
+  right: -5rem;
+  top: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__aboutpic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.hyper__text {
+  color: rgb(18, 177, 240);
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.hyper__text:hover {
+  color: rgb(13, 231, 86);
+  text-decoration: none;
+  text-decoration-color: rgb(181, 181, 181);
 }
