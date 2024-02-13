@@ -70,4 +70,8 @@
       font-size: 0.7rem;
   }
 
+  #projects {
+    height: flex;
+  }
+
 }

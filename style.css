@@ -315,6 +315,7 @@ a:hover {
   border: #1D2B36 0.25rem solid;
   border-radius: 3%;
   background-color: #C5EEEF;
+  margin-bottom: 7rem;
 }
 
 .about-text {
@@ -339,6 +340,7 @@ a:hover {
 
 .about-pic {
   border-radius: 2rem;
+  
 }
 
 .scroll__text {
@@ -397,4 +399,97 @@ a:hover {
   color: rgb(13, 231, 86);
   text-decoration: none;
   text-decoration-color: rgb(181, 181, 181);
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+  padding: 2vh;
+  margin-bottom: 7rem;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Reduce space between rows */
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 2rem); /* Adjust width to fit three details per row */
+  margin-bottom: 2rem; /* Add margin between details */
+}
+
+article .icon {
+  cursor: default;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+/* Projects Section */
+
+#projects {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.about-containers {
+  display: flex;
+  justify-content: space-between; /* Align projects in the same row with equal space between them */
+}
+
+.color-container {
+  border-radius: 2rem; /* Apply border-radius to match the project images */
+  border: 2px solid rgb(163, 163, 163); /* Add border to the project containers */
+  background: rgb(250, 250, 250);
+  width: 30%; /* Adjust width as needed */
+  padding: 1rem; /* Add padding to create space around the content */
+  margin: 0 1rem 2vh; /* Add margin between project containers */
+}
+
+.project-img {
+  width: 100%; /* Ensure project images fill their containers */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 1rem; /* Add margin to separate project image from project title and buttons */
+}
+
+.project-title {
+  margin: 1rem 0 0; /* Adjust margin */
+  color: black;
+  text-align: center; /* Center-align project titles */
+}
+
+.project-btn {
+  display: block; /* Ensure buttons are displayed as block elements */
+  width: 100%; /* Make buttons fill their containers */
+  margin-top: 1rem; /* Add margin to separate buttons */
+  color: black;
+  border: 2px solid rgb(163, 163, 163);
+  border-radius: 1rem; /* Adjust border-radius for buttons */
+  padding: 0.5rem 1rem; /* Add padding to buttons */
+  text-align: center; /* Center-align button text */
 }
