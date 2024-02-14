@@ -317,10 +317,10 @@ a:hover {
   background-color: #C5EEEF;
   margin-bottom: 7rem;
 }
-
+/* 
 .about-text {
   text-align: justify;
-}
+} */
 
 .about-container {
   gap: 2rem;
@@ -389,17 +389,6 @@ a:hover {
   margin: auto 0;
 }
 
-.hyper__text {
-  color: rgb(18, 177, 240);
-  text-decoration: underline;
-  text-decoration-color: black;
-}
-
-.hyper__text:hover {
-  color: rgb(13, 231, 86);
-  text-decoration: none;
-  text-decoration-color: rgb(181, 181, 181);
-}
 
 /* EXPERIENCE SECTION */
 
