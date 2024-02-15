@@ -75,7 +75,7 @@
   }
 
   #photography {
-    height: flex;
+    height: fit-content;
   }
 
   #experience {
@@ -128,6 +128,9 @@
     .about-containers {
       margin-top: 0;
     }
+    #photography {
+        height: fit-content;
+      }
   }
 
 
@@ -185,4 +188,38 @@
     .text-container {
       text-align: justify;
     }
+
+  }
+
+
+  @media screen and (max-width: 950px) {
+    #photography .about-containers {
+      flex-direction: column; /* Change to single column layout */
+      align-items: center; /* Center-align items */
+    }
+  
+    #photography .color-container {
+      width: 100%; /* Ensure containers take full width */
+      margin: 0 0 2rem; /* Adjust margin between containers */
+    }
+
+    #projects .about-containers {
+      flex-direction: column; /* Change to single column layout */
+      align-items: center; /* Center-align items */
+    }
+
+    #projects .color-container {
+      width: 75%;
+      height: 75%; /* Ensure containers take full width */
+      margin: 0 0 2rem; /* Adjust margin between containers */
+    }
+    #contact .contact-content {
+        flex-direction: column; /* Change to single column layout */
+        align-items: center; /* Center-align items */
+      }
+    
+      #contact .column {
+        width: 100%; /* Ensure columns take full width */
+        margin: 0 0 2rem; /* Adjust margin between columns */
+      }
   }

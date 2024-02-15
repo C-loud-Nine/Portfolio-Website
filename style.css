@@ -188,6 +188,7 @@ a:hover {
     border: tomato 0.15rem solid;
     height: 20vh;
     margin-top: 10px;
+    margin-bottom: 40px;
   }
  
   #profile {
@@ -414,16 +415,17 @@ a:hover {
 .article-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 1rem; /* Reduce space between rows */
+  flex-direction: row;
+  text-align: center;
 }
 
 article {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: calc(100% / 3 - 2rem); /* Adjust width to fit three details per row */
-  margin-bottom: 2rem; /* Add margin between details */
+  width: 10rem;
+  justify-content: space-around;
+  gap: 1.5rem;
 }
 
 article .icon {
@@ -464,7 +466,7 @@ article .icon {
   width: 100%; /* Ensure project images fill their containers */
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 1rem;
-  border-radius: 2rem; /* Add margin to separate project image from project title and buttons */
+  border-radius: 1rem; /* Add margin to separate project image from project title and buttons */
 }
 
 .project-title {
@@ -505,152 +507,133 @@ article .icon {
 
 
 
-/* CONTACT SECTION */
-
-.contact-content {
-  display: flex;
-  justify-content: center;
-}
+/* Contact Section */
 
 #contact {
-  display: block;
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  background-color: #f9f9f9; /* Set background color */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
-#contact .contact-content .column {
-  width: 40rem;
-  margin-bottom: 2rem;
-  margin-top: 6rem;
+#contact .scroll__text-top {
+  display: none; /* Hide scroll text */
 }
 
-#contact .contact-content .left {
-  margin-left: 10rem;
+#contact .section__text__p1 {
+  font-size: 1.2rem; /* Increase font size for section description */
+  color: #333; /* Change text color */
 }
 
-
-#contact .contact-content .text {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
+#contact .title {
+  font-size: 2.5rem; /* Increase font size for title */
+  margin-bottom: 1rem; /* Add margin bottom */
+  color: #333; /* Change text color */
 }
 
-#contact .contact-content .left p {
-  text-align: justify;
-}
-
-#contact .contact-content .left .icons {
-  margin: 10px 0;
-}
-
-#contact .contact-content .row {
+#contact .contact-content {
   display: flex;
-  height: 65px;
-  align-items: center;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  justify-content: space-between; /* Align content evenly */
 }
 
-#contact .contact-content .row .info {
-  margin-left: 30px;
+#contact .column {
+  flex: 1; /* Allow columns to take equal width */
+  margin-right: 2rem; /* Add margin between columns */
 }
 
-#contact .contact-content .row i {
-  font-size: 25px;
-  color: black;
+#contact .contant_text_inv {
+  font-size: 1.1rem; /* Set font size */
+  margin-bottom: 1.5rem; /* Add margin bottom */
+  color: #555; /* Change text color */
 }
 
-#contact .contact-content .info .head {
-  font-weight: 500;
+#contact .icons {
+  margin-bottom: 2rem; /* Add margin bottom */
 }
 
-#contact .contact-content .info .sub-title {
-  color: #333;
-}
-
-#contact .right form .fields {
+#contact .row {
   display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 1rem; /* Add margin bottom */
 }
 
-#contact .right form .field,
-#contact .right form .fields .field {
-  height: 45px;
-  width: 100%;
-  margin-bottom: 15px;
+#contact .row i {
+  font-size: 1.5rem; /* Set icon size */
+  margin-right: 1rem; /* Add margin right */
+  color: #333; /* Change icon color */
 }
 
-#contact .right form .textarea {
-  height: 150px;
-  width: 100%;
+#contact .info {
+  font-size: 1rem; /* Set font size */
 }
 
-#contact .right form .name {
-  margin-right: 50px;
+#contact .info .sub-title {
+  color: #666; /* Change text color */
 }
 
-#contact .right form .field input,
-#contact .right form .textarea textarea {
-  height: 100%;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 6px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 17px;
-  font-family: 'Poppins', sans-serif;
-  transition: all 0.3s ease;
+#contact .right {
+  flex: 1; /* Allow form column to take remaining width */
 }
 
-#contact .right form .field input:focus,
-#contact .right form .textarea textarea:focus {
-  border-color: #b3b3b3;
+#contact .text {
+  font-size: 1.2rem; /* Set font size */
+  margin-bottom: 1.5rem; /* Add margin bottom */
+  color: #333; /* Change text color */
 }
 
-#contact .right form .textarea textarea {
-  padding-top: 10px;
-  resize: none;
-}
-
-#contact .right form .button-area {
+#contact form .fields {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap; /* Allow fields to wrap on smaller screens */
+  margin-bottom: 1.5rem; /* Add margin bottom */
 }
 
-.btn__container {
-  display: flex;
-  margin-top: 1.3rem;
-  justify-content: center;
+#contact form .field {
+  flex: 1; /* Allow fields to take equal width */
+  margin-bottom: 1.5rem; /* Add margin bottom */
 }
 
-.btn__container__contact {
-  margin-top: 1.3rem;
+#contact form .field input,
+#contact form .field textarea {
+  width: 100%; /* Set width to fill parent */
+  padding: 0.7rem; /* Add padding */
+  font-size: 1rem; /* Set font size */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
 }
 
-.right form .button-area button {
-  color: #fff;
-  display: block;
-  width: 160px !important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: black;
-  border: 2px solid black;
-  transition: all 0.3s ease;
+#contact form .field textarea {
+  height: 150px; /* Set textarea height */
+  resize: none; /* Disable resizing */
 }
 
-.right form .button-area button:hover {
-  color: black;
-  background: none;
+#contact form .button-area {
+  text-align: right; /* Align buttons to right */
 }
 
-
-/* FOOTER SECTION */
-
-footer {
-  height: 26vh;
-  margin: 0 1rem;
+#contact form .button-area button {
+  padding: 0.7rem 1.5rem; /* Add padding */
+  font-size: 1rem; /* Set font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  background-color: #333; /* Set background color */
+  color: #fff; /* Set text color */
+  cursor: pointer; /* Add pointer cursor */
+  transition: background-color 0.3s ease; /* Add transition effect */
 }
 
-footer p {
-  text-align: center;
+#contact form .button-area button:hover {
+  background-color: #555; /* Change background color on hover */
+}
+
+#contact footer {
+  margin-top: 2rem; /* Add margin top */
+}
+
+#contact footer p {
+  text-align: center; /* Center-align text */
+  font-size: 0.9rem; /* Set font size */
+  color: #666; /* Change text color */
 }
