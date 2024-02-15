@@ -20,6 +20,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    font : 60;
 }
 
 p {
@@ -513,7 +514,7 @@ article .icon {
   position: relative;
   padding: 2rem;
   margin-bottom: 4rem;
-  background-color: #f9f9f9; /* Set background color */
+  background-color: white; /* Set background color */
   border-radius: 10px; /* Add border radius for rounded corners */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }

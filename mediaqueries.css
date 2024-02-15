@@ -134,8 +134,10 @@
   }
 
 
-  @media screen and (max-width: 600px) {
-    #contact,
+  @media screen and (max-width: 700px) {
+    #contact{
+      height: fit-content;
+    }
     footer {
       height: 40vh;
     }
@@ -189,6 +191,7 @@
       text-align: justify;
     }
 
+
   }
 
 
@@ -199,7 +202,8 @@
     }
   
     #photography .color-container {
-      width: 100%; /* Ensure containers take full width */
+      width: auto;
+      height: auto; /* Ensure containers take full width */
       margin: 0 0 2rem; /* Adjust margin between containers */
     }
 
@@ -209,7 +213,7 @@
     }
 
     #projects .color-container {
-      width: 75%;
+      width: 90%;
       height: 75%; /* Ensure containers take full width */
       margin: 0 0 2rem; /* Adjust margin between containers */
     }
@@ -222,4 +226,17 @@
         width: 100%; /* Ensure columns take full width */
         margin: 0 0 2rem; /* Adjust margin between columns */
       }
+
+      
+      #achievements .about-containers {
+        flex-direction: column; /* Change to single column layout */
+        align-items: center; /* Center-align items */
+      }
+      #achievements .color-container {
+        width: 60%;
+        height: 70%; /* Ensure containers take full width */
+        margin: 0 0 2rem; /* Adjust margin between containers */
+      }
+
+      
   }
