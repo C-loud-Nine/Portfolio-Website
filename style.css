@@ -181,25 +181,32 @@ a:hover {
     background-color: rgb(181, 181, 181);
   }
 
-   /* PROFILE SECTION */
+  /* PROFILE SECTION */
 
- #home {
-    position: relative;
-    background-color: 	#565484;
-    border: tomato 0.15rem solid;
-    height: 20vh;
-    margin-top: 10px;
-    margin-bottom: 40px;
-  }
- 
-  #profile {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    gap: 5rem;
-    height: 80vh;
-    margin: 0;
-  }
+#home {
+  position: relative;
+  height: 15vh;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  
+}
+
+
+
+#profile {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+  margin: 0;
+  margin-bottom: 10rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Set background color with opacity */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow for depth effect */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  padding: 2rem; /* Add padding for spacing */
+}
+
  
   .section__pic-container {
     display: flex;
@@ -309,86 +316,79 @@ a:hover {
 }
 
 
-/*About Section*/
-
-
+/* About Section */
 #about {
   position: relative;
-  border: #1D2B36 0.25rem solid;
-  border-radius: 3%;
+  border: 0.25rem solid #1D2B36;
+  border-radius: 1rem;
   background-color: #C5EEEF;
+  padding: 2rem;
   margin-bottom: 7rem;
 }
-/* 
-.about-text {
-  text-align: justify;
-} */
 
 .about-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
   gap: 2rem;
-  margin-bottom: 2rem;
   margin-top: 4rem;
 }
 
 .about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-container,
-.about-details-container {
+  flex: 1; /* Take remaining space */
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .about-pic {
   border-radius: 2rem;
-  
+  max-width: 100%;
+  height: auto;
+}
+
+.scroll__text,
+.scroll__text-top,
+.arrow,
+.arrow_top {
+  position: absolute;
+  right: -5rem;
 }
 
 .scroll__text {
-  position: absolute;
-  right: -5rem;
   bottom: 4.5rem;
 }
 
 .arrow {
-  position: absolute;
-  right: -5rem;
   bottom: 2.5rem;
 }
 
 .scroll__text-top {
-  position: absolute;
-  right: -5rem;
   top: 4.5rem;
 }
 
 .arrow_top {
-  position: absolute;
-  right: -5rem;
   top: 2.5rem;
 }
 
 .details-container {
   padding: 1.5rem;
-  flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid rgb(163, 163, 163);
   text-align: center;
+  flex: 1; /* Take remaining space */
 }
 
 .section-container {
+  display: flex;
+  align-items: center;
   gap: 4rem;
   height: 80%;
 }
 
 .section__aboutpic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  max-width: 400px; /* Limit maximum width */
+  flex: 0 0 400px; /* Set initial width and prevent shrinking */
 }
 
 
@@ -455,18 +455,23 @@ article .icon {
 }
 
 .color-container {
+  position: relative; /* Positioning for the project container */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Align items in the center horizontally */
+  justify-content: center; /* Align items in the center vertically */
   border-radius: 2rem; /* Apply border-radius to match the project images */
   border: 2px solid rgb(163, 163, 163); /* Add border to the project containers */
   background: rgb(250, 250, 250);
   width: 30%; /* Adjust width as needed */
   padding: 1rem; /* Add padding to create space around the content */
   margin: 0 1rem 2vh; /* Add margin between project containers */
+  transition: all 0.5s ease; /* Add transition for smooth animation */
 }
 
 .project-img {
   width: 100%; /* Ensure project images fill their containers */
   height: auto; /* Maintain aspect ratio */
-  margin-bottom: 1rem;
   border-radius: 1rem; /* Add margin to separate project image from project title and buttons */
 }
 
@@ -477,33 +482,208 @@ article .icon {
 }
 
 .project-btn {
-  display: block; /* Ensure buttons are displayed as block elements */
-  width: 100%; /* Make buttons fill their containers */
+  display: none; /* Initially hide the button */
   margin-top: 1rem; /* Add margin to separate buttons */
   color: black;
   border: 2px solid rgb(163, 163, 163);
   border-radius: 1rem; /* Adjust border-radius for buttons */
   padding: 0.5rem 1rem; /* Add padding to buttons */
   text-align: center; /* Center-align button text */
+  transition: opacity 0.5s ease; /* Add transition for smooth opacity change */
 }
 
+.color-container:hover .project-btn {
+  display: block; /* Show the button on hover */
+  transform: scale(1.05); /* Scale the button slightly on hover */
+}
 
+/* Slide-in animation for the project details */
+.project-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem; /* Add padding to the project details */
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateX(100%); /* Initially position the details off-screen */
+  transition: transform 0.5s ease; /* Add transition for smooth animation */
+}
+
+.color-container:hover .project-details {
+  transform: translateX(0); /* Slide the details into view on hover */
+}
 
 /* Achievements Section */
-
 #achievements {
-  position: relative;
-  margin-bottom: 4rem;
+  padding: 4rem 0;
+  background-color: #f4f4f4;
+  text-align: center;
 }
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.details-container {
+  position: relative;
+  width: 250px;
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.color-container:hover .details-container {
+  transform: translateY(-10px); /* Apply animation on hover */
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.achievements-description {
+  font-size: 1rem;
+  color: #888;
+}
+
+.extra-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 2rem); /* Adjust width to fit container */
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  height: calc(100% - 2rem); /* Adjust height to fit container */
+}
+
+.color-container:hover .extra-details {
+  opacity: 1;
+}
+
+.extra-details p {
+  margin-bottom: 0.5rem;
+}
+
+.color-container {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.color-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Change color for hover effect */
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.color-container:hover::before {
+  background-color: rgba(0, 0, 0, 0.1); /* Change color for hover effect */
+}
+
 
 
 
 /* Photography Section */
-
 #photography {
   position: relative;
   margin-bottom: 4rem;
 }
+
+/* Title Styling */
+#photography .title {
+  margin-bottom: 2rem; /* Adjust this value as needed */
+}
+
+/* Gallery Animation */
+.gallery-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Define keyframe animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Individual Photo Animation */
+.photo {
+  flex: 0 0 calc(33.333% - 1rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.1);
+}
+
+.photo h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.photo:hover h3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 

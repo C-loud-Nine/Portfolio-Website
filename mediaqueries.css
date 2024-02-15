@@ -1,4 +1,4 @@
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1430px) {
     #desktop-nav {
       display: none;
     }
@@ -6,7 +6,7 @@
       display: flex;
     }
     .about-containers {
-      flex-wrap: wrap;
+      flex: wrap;
     }
 
     /* Profile */
@@ -61,6 +61,14 @@
       margin-top: 1rem;
       font-size: 13px;
   }
+
+  section,
+    .section-container {
+      height: fit-content;
+    }
+    section {
+      margin: 0 5%;
+    }
 
   .details-container {
       padding:0.9rem;
@@ -130,7 +138,8 @@
     }
     #photography {
         height: fit-content;
-      }
+    }
+    
   }
 
 
@@ -191,6 +200,15 @@
       text-align: justify;
     }
 
+    .gallery-row {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    
+
+    
+  
 
   }
 
