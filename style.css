@@ -67,7 +67,8 @@ a {
 }
 
 a:hover {
-    color: grey;
+    color: #586393;
+    font-weight: bold;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181, 181, 181);
@@ -82,84 +83,98 @@ a:hover {
 
  /* HAMBURGER MENU */
 
- #hamburger-nav {
-    display: none;
-  }
- 
-  .hamburger-menu {
-    position: relative;
-    display: inline-block;
-  }
- 
-  .hamburger-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 22px;
-    width: 28px;
-    cursor: pointer;
-  }
+/* HAMBURGER MENU */
 
-  .hamburger-icon span {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    transition: all 0.3 ease-in-out;
-  }
- 
-  .menu-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3 ease-in-out;
-  }
- 
-  .menu-links a {
-    display: block;
-    padding: 8px;
-    text-align: center;
-    font-size: 1.3rem;
-    color: black;
-    text-decoration: none;
-    transition: all 0.3 ease-in-out;
-  }
- 
-  .menu-links li {
-    list-style: none;
-  }
- 
-  .menu-links.open {
-    max-height: 350px;
-  }
- 
-  .hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
-  }
- 
-  .hamburger-icon.open span:nth-child(2) {
-    opacity: 0;
-  }
- 
-  .hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translate(10px, -5px);
-  }
- 
-  .hamburger-icon span:first-child {
-    transform: none;
-  }
- 
-  .hamburger-icon span:nth-child(2) {
-    opacity: 1;
-  }
- 
-  .hamburger-icon span:last-child {
-    transform: none;
-  }
- 
+#hamburger-nav {
+  display: none;
+  position: relative;
+  z-index: 999;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.close-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+  width: 28px;
+  cursor: pointer;/* Change the color here */
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding-top: 80px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.menu-links a {
+  display: block;
+  padding: 8px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links.open {
+  transform: translateX(0);
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:nth-child(2) {
+  opacity: 1;
+}
+
+.hamburger-icon span:last-child {
+  transform: none;
+}
+
+
+
+
 
   /* SECTIONS */
 
@@ -319,84 +334,94 @@ a:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-
 /* About Section */
 #about {
   position: relative;
-  border: 0.25rem solid #1D2B36;
-  border-radius: 1rem;
+  border: 0.15rem solid #1D2B36;
+  border-radius: 0.5rem;
   background-color: #B5C2CA;
-  padding: 2rem;
-  margin-bottom: 7rem;
+  padding: 1.5rem;
+  margin-bottom: 5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+#about:hover {
+  background-color: #D0EBDA; /* Change background color on hover */
+  transform: scale(1.02);
+  border-color: #19242f;
 }
 
 .about-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-  gap: 2rem;
-  margin-top: 4rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .about-details-container {
-  flex: 1; /* Take remaining space */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .about-pic {
-  border-radius: 2rem;
+  border-radius: 1rem;
   max-width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
 }
 
-.scroll__text,
-.scroll__text-top,
+.about-pic:hover {
+  transform: scale(1.05);
+}
+
+.details-container {
+  position: relative; /* Ensure arrows are positioned relative to this container */
+  padding: 1rem;
+  background: white;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #a3a3a3;
+  text-align: center;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color:  #8399A6;
+}
+
+.details-container:hover h3,
+.details-container:hover p {
+  color: white; /* Change text color to white on hover */
+}
+
 .arrow,
 .arrow_top {
   position: absolute;
   right: -5rem;
 }
 
-.scroll__text {
-  bottom: 4.5rem;
-}
 
-.arrow {
-  bottom: 2.5rem;
-}
 
-.scroll__text-top {
-  top: 4.5rem;
-}
 
-.arrow_top {
-  top: 2.5rem;
-}
-
-.details-container {
-  padding: 1.5rem;
-  background: white;
-  border-radius: 2rem;
-  border: 0.1rem solid rgb(163, 163, 163);
-  text-align: center;
-  flex: 1; /* Take remaining space */
-}
 
 .section-container {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   height: 80%;
 }
 
 .section__aboutpic-container {
-  max-width: 400px; /* Limit maximum width */
-  flex: 0 0 400px; /* Set initial width and prevent shrinking */
+  max-width: 300px;
+  flex: 0 0 300px;
 }
 
 
-/* EXPERIENCE SECTION */
+
 
 /* EXPERIENCE SECTION */
 
@@ -447,7 +472,7 @@ a:hover {
 
 .progress {
   background-color: white;
-  height: 10px;
+  height: 15px;
   border-radius: 10px;
   position: relative;
 }
@@ -456,6 +481,11 @@ a:hover {
   height: 100%;
   border-radius: 10px;
   background-color: #3c3b6e;
+  width: 0; /* Set initial width to 0 */
+}
+
+.bars:hover .progress-in {
+  animation: increaseWidth 1s forwards; /* Apply animation on hover */
 }
 
 .skill-percent {
@@ -463,6 +493,19 @@ a:hover {
   right: 0;
   top: -25px;
   font-size: 0.8rem;
+}
+.skill-percent span {
+  color: black; /* Set the color of the percentage number */
+}
+
+/* Define keyframes for increasing width animation */
+@keyframes increaseWidth {
+  from {
+    width: 0; /* Start with 0 width */
+  }
+  to {
+    width: var(--skill-percent); /* End with 100% width */
+  }
 }
 
 /* .experience-details-container {
@@ -644,8 +687,11 @@ article .icon {
   height: calc(100% - 2rem); /* Adjust height to fit container */
 }
 
+
+
 .color-container:hover .extra-details {
-  opacity: 1;
+  opacity: .95;
+  background-color: #F19EAA;;
 }
 
 .extra-details p {
